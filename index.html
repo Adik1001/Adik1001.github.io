@@ -11,7 +11,7 @@
 <title>Adilzhan Salamat</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column; results set like a contest standings table, rating shown in Codeforces "Specialist" cyan */
+/* Layout: one reading column; results set like a contest standings table, Codeforces rank shown in its Master orange */
 :root {
   --bg: #f3f6f6;
   --surface: #ffffff;
@@ -23,6 +23,8 @@
   --gold: #a87b00;
   --silver: #6b7780;
   --bronze: #a35a2a;
+  --master: #b35c00;
+  --master-soft: #fbe8d2;
   --display: "Unbounded", "Segoe UI", system-ui, sans-serif;
   --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
@@ -30,13 +32,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0d1416; --surface: #131d20; --fg: #e4eef0; --muted: #93a6ab; --line: #24343a;
-    --accent: #3cc7bb; --accent-soft: #143331; --gold: #e0b43a; --silver: #b3bec6; --bronze: #d98b55;
+    --accent: #3cc7bb; --accent-soft: #143331; --gold: #e0b43a; --silver: #b3bec6; --bronze: #d98b55; --master: #ffa040; --master-soft: #3a2710;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0d1416; --surface: #131d20; --fg: #e4eef0; --muted: #93a6ab; --line: #24343a;
-  --accent: #3cc7bb; --accent-soft: #143331; --gold: #e0b43a; --silver: #b3bec6; --bronze: #d98b55;
+  --accent: #3cc7bb; --accent-soft: #143331; --gold: #e0b43a; --silver: #b3bec6; --bronze: #d98b55; --master: #ffa040; --master-soft: #3a2710;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -67,7 +69,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 .cf .handle { font: 500 1rem var(--mono); color: var(--accent); text-decoration: none; }
 .cf .rating { font: 500 1.6rem/1 var(--display); font-variant-numeric: tabular-nums; }
-.cf .rank { font: 500 0.8rem var(--mono); color: var(--accent); background: var(--accent-soft); padding: 4px 8px; border-radius: 999px; }
+.cf .rank { font: 500 0.8rem var(--mono); color: var(--master); background: var(--master-soft); padding: 4px 8px; border-radius: 999px; }
 
 /* Standings table */
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
@@ -126,8 +128,8 @@ footer { color: var(--muted); font-size: 0.85rem; }
     <div class="cf">
       <span class="label">Codeforces</span>
       <a class="handle" href="https://codeforces.com/profile/Daki-sa" target="_blank" rel="noopener">Daki-sa</a>
-      <span class="rating">1475</span>
-      <span class="rank">Specialist</span>
+      <span class="rating">2127</span>
+      <span class="rank">Master</span>
     </div>
   </header>
 
