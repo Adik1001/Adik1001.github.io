@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Adilzhan Salamat, competitive programmer from Astana, Kazakhstan: olympiad results, work, projects and contact.">
+<meta property="og:title" content="Adilzhan Salamat">
+<meta property="og:description" content="Competitive programmer from Astana, Kazakhstan. IZhO 2026 bronze medalist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2303857d'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Adilzhan Salamat</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; results set like a contest standings table, rating shown in Codeforces "Specialist" cyan */
+:root {
+  --bg: #f3f6f6;
+  --surface: #ffffff;
+  --fg: #142024;
+  --muted: #5a6b70;
+  --line: #d6e0e1;
+  --accent: #03857d;
+  --accent-soft: #dcefed;
+  --gold: #a87b00;
+  --silver: #6b7780;
+  --bronze: #a35a2a;
+  --display: "Unbounded", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1416; --surface: #131d20; --fg: #e4eef0; --muted: #93a6ab; --line: #24343a;
+    --accent: #3cc7bb; --accent-soft: #143331; --gold: #e0b43a; --silver: #b3bec6; --bronze: #d98b55;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1416; --surface: #131d20; --fg: #e4eef0; --muted: #93a6ab; --line: #24343a;
+  --accent: #3cc7bb; --accent-soft: #143331; --gold: #e0b43a; --silver: #b3bec6; --bronze: #d98b55;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 400 16px/1.6 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 820px; margin: 0 auto; padding-block: 56px 72px; display: grid; gap: 56px; }
+h1, h2 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.1rem, 6vw, 3.3rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; }
+h2 { font-size: 1.05rem; font-weight: 500; letter-spacing: 0.02em; display: flex; align-items: baseline; gap: 12px; }
+h2::after { content: ""; flex: 1; border-bottom: 1px solid var(--line); transform: translateY(-4px); }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.label { font: 500 0.75rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* Hero */
+.hero { display: grid; gap: 20px; }
+.lead { font-size: 1.15rem; max-width: 60ch; color: var(--fg); }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: 0.95rem; }
+.cf {
+  display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+  justify-self: start; max-width: 100%;
+}
+.cf .handle { font: 500 1rem var(--mono); color: var(--accent); text-decoration: none; }
+.cf .rating { font: 500 1.6rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.cf .rank { font: 500 0.8rem var(--mono); color: var(--accent); background: var(--accent-soft); padding: 4px 8px; border-radius: 999px; }
+
+/* Standings table */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th, td { text-align: left; padding: 11px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { font: 500 0.72rem var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); background: transparent; }
+td.year { font-family: var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.medal { font: 600 0.85rem var(--mono); white-space: nowrap; }
+.medal::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; background: currentColor; }
+.g { color: var(--gold); } .s { color: var(--silver); } .b { color: var(--bronze); } .p { color: var(--accent); }
+
+/* Entries */
+.entries { display: grid; gap: 22px; }
+.entry { display: grid; grid-template-columns: 150px 1fr; gap: 4px 24px; }
+.entry .when { font: 400 0.85rem/1.7 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.entry .what { min-width: 0; }
+.entry h3 { margin: 0; font-size: 1.02rem; font-weight: 600; }
+.entry .role { color: var(--muted); font-size: 0.92rem; }
+.entry p.desc { margin-top: 4px; }
+
+/* Scores */
+.scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.score { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; background: var(--surface); display: grid; gap: 6px; }
+.score .num { font: 500 1.5rem/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.score .sub { color: var(--muted); font-size: 0.85rem; }
+
+/* Contact */
+.contact { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.addr { font: 500 1rem var(--mono); user-select: all; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); overflow-wrap: anywhere; }
+button {
+  font: 500 0.9rem var(--body); color: var(--bg); background: var(--accent);
+  border: 0; border-radius: 8px; padding: 11px 16px; cursor: pointer;
+}
+.status { font-size: 0.9rem; color: var(--muted); min-height: 1.4em; }
+footer { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 560px) {
+  .wrap { padding-block: 32px 48px; gap: 44px; }
+  .entry { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero > * { animation: rise .5s ease-out both; }
+  .hero > *:nth-child(2) { animation-delay: .05s; } .hero > *:nth-child(3) { animation-delay: .1s; } .hero > *:nth-child(4) { animation-delay: .15s; }
+  @keyframes rise { from { transform: translateY(6px); } to { transform: none; } }
+}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <span class="label">Competitive programmer · Astana, Kazakhstan</span>
+    <h1>Adilzhan Salamat</h1>
+    <p class="lead">I solve algorithm problems, build products people use, and teach olympiad programming to younger students. I started computer science a year behind my classmates and caught up by teaching myself, then went from regional medals to an international one.</p>
+    <div class="cf">
+      <span class="label">Codeforces</span>
+      <a class="handle" href="https://codeforces.com/profile/Daki-sa" target="_blank" rel="noopener">Daki-sa</a>
+      <span class="rating">1475</span>
+      <span class="rank">Specialist</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="results">
+    <h2 id="results">Olympiad results</h2>
+    <div class="table-wrap" style="margin-top:20px">
+      <table>
+        <thead><tr><th>Year</th><th>Contest</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td class="year">2026</td><td>22nd International Zhautykov Olympiad in Informatics</td><td><span class="medal b">Bronze</span></td></tr>
+          <tr><td class="year">2025–26</td><td>Kazakhstan National Olympiad in Informatics (700+ participants)</td><td><span class="medal b">Bronze ×2</span></td></tr>
+          <tr><td class="year">2025</td><td>Eurasian Olympiad in Informatics</td><td><span class="medal b">Bronze</span></td></tr>
+          <tr><td class="year">2024</td><td>Eurasian Olympiad in Informatics</td><td><span class="medal s">Silver</span></td></tr>
+          <tr><td class="year">2025</td><td>Kazakhstan Bilim Olympiad, Senior Division</td><td><span class="medal s">Silver</span></td></tr>
+          <tr><td class="year">2025</td><td>Astana Regional Olympiad in Informatics</td><td><span class="medal g">Gold</span></td></tr>
+          <tr><td class="year">2025–26</td><td>AITU iCode Programming Olympiad</td><td><span class="medal p">3rd place ×2</span></td></tr>
+          <tr><td class="year">2025</td><td>Global Sparks Project Olympiad</td><td><span class="medal b">Bronze</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="work">
+    <h2 id="work">Work</h2>
+    <div class="entries" style="margin-top:20px">
+      <div class="entry"><div class="when">Sep 2025 – Aug 2026</div><div class="what"><h3>Algarytm Integration</h3><div class="role">Algorithm Implementation Intern</div><p class="desc">Implemented algorithms that automated manual business processes for 3 client companies.</p></div></div>
+      <div class="entry"><div class="when">Nov 2024 – Jun 2026</div><div class="what"><h3>Bilim-Innovation Informatics Olympiad Camps</h3><div class="role">Lead Olympiad Trainer, 4 camps</div><p class="desc">One of 4 lead trainers. Taught algorithms to students aged 11–14, about 9 hours a day for 10 days per camp.</p></div></div>
+      <div class="entry"><div class="when">2025 – 2026</div><div class="what"><h3>Navitas AI</h3><div class="role">Intern, AI in Education</div><p class="desc">Helped the company develop more ethical ways to use AI in education.</p></div></div>
+      <div class="entry"><div class="when">Feb – Mar 2025</div><div class="what"><h3>Nearcrowd</h3><div class="role">Problem Solver, Reviewer &amp; AI Data Trainer</div><p class="desc">Solved Codeforces problems and wrote step-by-step explanations used as AI training data; reviewed other trainers' solutions.</p></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="projects">
+    <h2 id="projects">Projects &amp; research</h2>
+    <div class="entries" style="margin-top:20px">
+      <div class="entry"><div class="when">Jun – Aug 2025</div><div class="what"><h3>Cotrol, an AI health-care platform</h3><div class="role">nFactorial Incubator, full scholarship</div><p class="desc">Built the product end to end and grew it to 100 active users in 10 weeks.</p></div></div>
+      <div class="entry"><div class="when">Feb – Aug 2026</div><div class="what"><h3>SVD low-rank image compression for TinyML devices</h3><div class="role">Pioneer Research Institute, full scholarship</div><p class="desc">University-level research paper on compressing images for small edge devices. Final grade: A.</p></div></div>
+      <div class="entry"><div class="when">2026</div><div class="what"><h3>Consult for Impact · IOAI 2026</h3><div class="role">Strategy report and volunteering</div><p class="desc">Strategy report for Kutumb Foundation, an NGO in India; volunteer proctor at the International Olympiad in AI.</p></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="edu">
+    <h2 id="edu">Education</h2>
+    <div class="entries" style="margin-top:20px">
+      <div class="entry"><div class="when">Class of 2027</div><div class="what"><h3>Astana Bilim-Innovation Lyceum for Gifted Boys</h3><div class="role">GPA 5.0 / 5.0 · President, Competitive Programming Club since 2023</div></div></div>
+    </div>
+    <div class="scores" style="margin-top:20px">
+      <div class="score"><span class="label">SAT</span><span class="num">1460</span><span class="sub">Math 760</span></div>
+      <div class="score"><span class="label">IELTS Academic</span><span class="num">7.5</span><span class="sub">C1 English</span></div>
+      <div class="score"><span class="label">AP Computer Science A</span><span class="num">5</span><span class="sub">Self-studied · AP Scholar</span></div>
+      <div class="score"><span class="label">AP Calculus BC</span><span class="num">4</span><span class="sub">Self-studied</span></div>
+    </div>
+    <p style="margin-top:16px;color:var(--muted)">Languages: Kazakh, Russian, English. Skills: C++, Python, Java, JavaScript, SQL; graphs, dynamic programming, data structures.</p>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <div class="contact" style="margin-top:20px">
+      <span class="addr" id="email">adilzhansalamat@gmail.com</span>
+      <button type="button" id="copy">Copy email</button>
+      <a href="https://codeforces.com/profile/Daki-sa" target="_blank" rel="noopener">Codeforces profile</a>
+    </div>
+    <p class="status" id="status" aria-live="polite"></p>
+  </section>
+
+  <footer>Adilzhan Salamat · Astana · 2026</footer>
+</main>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var text = document.getElementById('email').textContent;
+  var status = document.getElementById('status');
+  function fallback() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    status.textContent = 'Email selected. Press Ctrl+C to copy.';
+  }
+  try {
+    navigator.clipboard.writeText(text).then(function () { status.textContent = 'Email copied.'; }, fallback);
+  } catch (e) { fallback(); }
+});
+</script>
+</body>
+</html>
